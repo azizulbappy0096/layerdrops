@@ -1,0 +1,201 @@
+.banner {
+    padding-top: 280px;
+    padding-bottom: 480px;
+    background-image: url("/public/img/banner/banner-1-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner__btn {
+    font-size: 14px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 2px;
+}
+
+.banner__btn a, .banner__btn-two a {
+    display: inline-block;
+    background-color: #f7c324;
+    color: #252758;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+}
+
+.banner__btn a:hover, .banner__btn-two a:hover {
+    color: white;
+    background-color: #252758;
+}
+
+.banner__title {
+    font-size: 70px;
+    line-height: 65px;
+    font-weight: 900;
+}
+
+.banner__img-moc {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    animation: banner-moc 3s linear infinite;
+    transform-origin: center center ;
+    z-index: 1;
+}
+
+.banner__img-globe {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    animation: banner-globe 6s linear 2s infinite;
+    transform-origin: center center ;
+}
+
+.banner__img-rocket {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    animation: banner-rocket 10s linear 2s infinite;
+}
+
+[class*=banner__shape-] {
+    display: block;
+    
+    opacity: 0.1;
+    position: absolute;
+    animation: banner-shape 3s linear infinite;
+    transform-origin: center center ;
+}
+
+.banner__shape-1 {
+    background-color: white;
+    height: 20px;
+    width: 100px;
+    top: 28%;
+    left: 4%;
+}
+
+.banner__shape-2 {
+    background-color: white;
+    height: 18px;
+    width: 80px;
+    top: 15%;
+    left: 45%;
+}
+
+.banner__shape-3 {
+    background-color: white;
+    height: 10px;
+    width: 52px;
+    top: 10%;
+    left: 70%;
+}
+
+.banner__shape-4 {
+    opacity: 0.3;
+    background-color: #000000;
+    height: 10px;
+    width: 52px;
+    top: 60%;
+    left: 20%;
+}
+
+.banner__shape-5 {
+    background-color: white;
+    height: 18px;
+    width: 80px;
+   right: 10%;
+   bottom: 30%;
+}
+
+
+@keyframes banner-moc {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(20px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes banner-globe {
+    0% {
+        transform: perspective(200px) rotate3d(1, 0, 0, 0deg);
+    }
+
+    20% {
+        transform: perspective(200px) rotate3d(1, 0, 0, 45deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotate3d(1, 0, 0, 360deg);
+    }
+}
+@keyframes banner-rocket {
+    0% {
+        transform: perspective(400px) translateX(0) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(400px) translateX(-500px) translateY(-400px);
+        opacity: 0;
+    }
+}
+@keyframes banner-shape {
+    8%, 100% {
+        transform: perspective(400px) scale(1) rotate3d(1, 1, 1, 0deg);
+        
+    }
+
+    20%, 80% {
+        transform: perspective(400px) scale(1.3) rotate3d(1, 1, 1, 180deg);
+    }
+
+    50% {
+        transform: perspective(400px) scale(1.1) rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .banner__img-moc {
+        right: -29%;
+     }
+}
+
+@media screen and (max-width: 991px) {
+    .banner {
+        padding-top: 120px;
+        padding-bottom: 240px;
+    }
+    .banner__img-moc {
+        position: relative;
+        top: auto;
+        right: auto;
+        max-width: 100%;
+    }
+
+    .banner__content {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 576px) { 
+    .banner__btn {
+        font-size: 10px;}
+
+        .banner__title {
+            font-size: 60px;
+           
+        }
+}

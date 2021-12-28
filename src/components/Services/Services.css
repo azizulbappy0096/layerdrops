@@ -1,0 +1,105 @@
+.services__title {
+    color: #252758;
+    font-size: 70px;
+    letter-spacing: -2px;
+}
+
+.services__card {
+    box-shadow: 0px 10px 60px 0px rgb(37 39 88 / 10%);
+    padding-top: 28px;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.services__icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #5128c4 0%, #7541d1 50%, #b16aeb 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services__icon::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #723fd0 0%, #864cd8 100%);
+    clip-path: ellipse(30% 50% at 0% 52%);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.services__icon svg {
+    height: 60%;
+    width: 60%;
+    position: relative;
+    color: white;
+}
+
+.services__card-title a {
+    color: #252758;
+    font-size: 24px;
+    line-height: 1.5em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s linear;
+}
+
+.services__card-title a:hover {
+    color: #a461e5;
+}
+
+.services__card-desp {
+    color: #8B8C9C;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.services__card-link {
+    position: relative;
+    display: block;
+    border-top: 1px solid #EFF0F7;
+    color: #252758;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    transition: all 0.25s linear;
+}
+
+.services__card-link::before {
+    content: "";
+    height: 1px;
+    width: 90px;
+    background-color: #a461e5;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.25s linear;
+}
+
+.services__card-link:hover {
+    background-color: #f7c324;
+    color: #252758;
+}
+
+.services__card-link:hover.services__card-link::before {
+    width: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .services__title {
+  
+        font-size: 50px;
+    
+    }
+ }
