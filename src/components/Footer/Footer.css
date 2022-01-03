@@ -1,0 +1,77 @@
+.footer__widget {
+  flex: 1 1 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.footer__widget-title {
+  color: #252758;
+}
+
+.footer__widget img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.widget__list li {
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.25s linear;
+}
+
+.widget__list li:hover {
+  color: #a461e5;
+}
+
+.footer__widget-subscribe {
+  background-color: #eff0f7;
+  padding: 20px 0 20px 16px;
+  position: relative;
+}
+
+.subscribe-btn {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  border: none;
+  transform: translateY(-50%);
+}
+
+.subscribe-btn svg {
+  width: 24px;
+  transform: rotate(-36deg);
+  color: #a461e5;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+.subscribe-btn svg:hover {
+  color: #252758;
+}
+
+.footer__widget-subscribe input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  letter-spacing: -1px;
+  word-spacing: 4px;
+  color: #8b8c9c;
+}
+
+.footer__widget-subscribe input:focus {
+  outline: none;
+}
+
+.footer__copyright {
+    font-weight: 500;
+}
+
+.footer__copyright a {
+    color: #a461e5;
+    transition: all 0.25s linear;
+}
+
+.footer__copyright a:hover {
+    color: #f7c324;
+}

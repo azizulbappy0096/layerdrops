@@ -1,0 +1,85 @@
+
+
+.article__img {
+border-radius: 16px;
+box-shadow: 0px 10px 60px 0px rgb(37 39 88 / 10%);
+position: relative;
+}
+
+.article__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-image: linear-gradient(90deg, #5128c4 0%, #7541d1 50%, #b16aeb 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 49%);
+    transition: all 0.3s ease-in-out;
+}
+
+.article__card:hover .article__img::before {
+    bottom: 0;
+}
+
+.article__img a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.article__img a::before {
+    content: "→";
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-65%) scale(0.6);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.article__card:hover .article__img a {
+    top: 50%;
+    opacity: 1;
+}
+
+.article__img a:hover::before {
+    left: -35px;
+    opacity: 1;
+    transform: translateY(-65%) scale(1);
+}
+
+.article__card-meta a, .article__card-meta span {
+    color: #a461e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s linear;
+}
+
+.article__card-meta a:hover {
+    color: #252758;
+}
+
+.article__card-title {
+    color: #252758;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.article__card-title:hover {
+    color: #a461e5;
+}
+
+.footer-upper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-image: linear-gradient(90deg, #5128c4 0%, #7541d1 50%, #b16aeb 100%);
+}

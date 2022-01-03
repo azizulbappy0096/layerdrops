@@ -1,3 +1,8 @@
+.header__logo {
+    width: 100px;
+    object-fit: contain;
+}
+
 .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

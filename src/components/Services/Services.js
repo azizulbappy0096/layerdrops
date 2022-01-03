@@ -24,15 +24,11 @@ function Card({ Icon, title, description, link }) {
       </div>
       <p className="services__card-desp text-center mb-4">
         {description.map((data, idx) => {
-          if (idx !== title.length - 1) {
-            return (
-              <>
-                {data} <br />{" "}
-              </>
-            );
-          } else {
-            return data;
-          }
+          return (
+            <>
+              {data} <br />{" "}
+            </>
+          );
         })}
       </p>
       <a
@@ -97,11 +93,12 @@ const SEO = () => (
 
 function Services() {
   return (
-    <div className="container pt-5 pt-md-0">
+    <div className="services position-relative">
+    <div className="container pt-5 pt-md-0 position-relative">
       <div className="row justify-content-center">
         <div className="col-12 text-center">
           <h1 className="services__title">
-            Lums can boost up your web traffic
+            Lums can boost <br /> up your web traffic
           </h1>
         </div>
 
@@ -128,7 +125,7 @@ function Services() {
                 "There are many variations of",
                 "passages of lorem ipsum is",
                 "simply free text but majority",
-                " have suffered.",
+                "have suffered.",
               ]}
               link="#"
             />
@@ -148,6 +145,7 @@ function Services() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
