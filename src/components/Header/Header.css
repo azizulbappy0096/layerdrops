@@ -3,8 +3,20 @@
     object-fit: contain;
 }
 
-.navbar {
+.navbar-absolute {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-fixed {
+    background-image: linear-gradient(90deg, #5128c4 0%, #7541d1 50%, #b16aeb 100%);
+    transition: all 0.5s ease;
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -26,4 +38,29 @@
 .nav__button:hover {
     color: #fff;
     background-color: #252758;
+}
+
+.navbar-collapse.show, .navbar-collapse.collapsing {
+    background-color: #252758;
+    margin-top: 20px;
+}
+
+.navbar-collapse.collapsing .navbar-nav, .navbar-collapse.show .navbar-nav {
+    margin: 0 !important;
+}
+
+.navbar-collapse.collapsing .navbar-nav > a, .navbar-collapse.show .navbar-nav > a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 576px) { 
+    .header__logo {
+        width: 70px;
+     
+    }
 }

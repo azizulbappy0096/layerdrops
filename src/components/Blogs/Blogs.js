@@ -1,46 +1,30 @@
 import React from "react";
-import "./Articles.css";
+import { ArticleCard } from "../Articles/Articles";
+import "./Blogs.css";
 
-export const ArticleCard = ({
-  author,
-  publishedAt,
-  commentsCount,
-  title,
-  link,
-  img,
-}) => {
-  return (
-    <div className="article__card">
-      <div className="article__img overflow-hidden">
-        <img className="w-100" src={img} alt={title} />
-        <a href={link} className="text-capitalize">
-          Read more
-        </a>
-      </div>
-      <div className="article__card-content mt-4">
-        <div className="article__card-meta d-flex align-items-center">
-          <a href={link}>By {author}</a>
-          <span className="mx-2">.</span>
-          <a href={link}>{publishedAt}</a>
-          <span className="mx-2">.</span>
-          <a href={link}>{commentsCount} comments</a>
-        </div>
-        <h3 className="article__card-title mt-2">
-          <a href={link}>{title}</a>
-        </h3>
-      </div>
-    </div>
-  );
-};
-
-function Article() {
+function Blogs() {
   return (
     <>
-      <div className="container my-5 ">
-        <h2 className="cta-title text-center my-5 pb-2">
-          Check out our latest
-          <br /> news & articles
-        </h2>
+      <div className="blogs-banner">
+        <div className="container">
+          <div className="row align-items-end">
+            <div className="col-12 col-md-8 text-center text-md-start">
+              <h1 className="text-white cta-title"> Blog Posts </h1>
+            </div>
+            <div className="col-12 col-md-4 ">
+              <ul className="breadcrumbs list-unstyled rounded-pill mx-auto my-4">
+                <li className="breadcrumb__item text-capitalize">
+                  <a href="/"> Home </a>
+                </li>
+                <li className="breadcrumb__item text-capitalize current">
+                  <a href="/"> Blogs </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container mt-5 pt-5" >
         <div className="row">
           <div className="col-12 col-lg-6 mb-4">
             <ArticleCard
@@ -92,4 +76,4 @@ marketing pitfalls"
   );
 }
 
-export default Article;
+export default Blogs;

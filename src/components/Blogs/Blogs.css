@@ -1,0 +1,37 @@
+.blogs-banner {
+    padding-top: 280px;
+    padding-bottom: 120px;
+    background-image: url("/public/img/banner/inner-banner-bg-1-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.breadcrumbs {
+    padding: 8px 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: fit-content;
+}
+
+.breadcrumb__item {
+    display: inline-block;
+    letter-spacing: 1.5px;
+    transition: all 0.25s linear;
+}
+
+.breadcrumb__item.current {
+    color: #f7c324;
+}
+
+.breadcrumb__item:hover {
+    color: #f7c324;
+}
+
+.breadcrumb__item.current::before {
+    content: ".";
+    margin: 0 20px;
+}

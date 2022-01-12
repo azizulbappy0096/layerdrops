@@ -2,7 +2,7 @@
   z-index: 10;
 }
 
-.services::before, .cta__two::before {
+.services::before, .cta__two::before, .footer::before {
     content: "";
     width: 750px;
     height: 750px;
@@ -150,7 +150,7 @@
 }
 
 @media screen and (max-width: 991px) { 
-    .services::before, .cta__two::before {
+    .services::before, .cta__two::before, .footer::before {
         content: none;
      }
 }

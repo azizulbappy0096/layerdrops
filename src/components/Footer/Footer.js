@@ -3,8 +3,8 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="container">
-      <div className="row footer d-flex justify-content-between align-items-start">
+    <div className="container footer">
+      <div className="row d-flex justify-content-between align-items-start">
         <div className="col-6 col-lg-2 mb-3 footer__widget">
           <a href="#">
             <img src="/img/logo-dark.png" alt="logo-dark" />
@@ -102,7 +102,7 @@ function Footer() {
       </div>
         <hr className="my-5" />
     <div className="row">
-        <div className="col-md-6 col-12 text-center text-md-start">
+        <div className="col-md-6 col-12 text-center text-lg-start">
             <p className="footer__copyright">© copyright 2019 by <a href="#">Layerdrops.com</a></p>
         </div>
     </div>
